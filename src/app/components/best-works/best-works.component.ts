@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import * as M from 'materialize-css'
 
 @Component({
@@ -7,14 +7,19 @@ import * as M from 'materialize-css'
   styleUrls: ['./best-works.component.scss']
 })
 export class BestWorksComponent implements OnInit {
+  @ViewChild('carousel', { static: false })carousel: ElementRef;
   instances: M.Carousel;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.carousel');
-      this.instances = M.Carousel.init(elems);
-    });
+
   }
+
+  ngAfterViewInit()	{
+    this.instances = M.Carousel.init(this.carousel.nativeElement);
+
+  }
+
 
 }

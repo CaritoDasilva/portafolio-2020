@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Vidaloka&display=swap');
 html, body { 
     height: 100%;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/portafoliocaritodasilva.appspot.com/o/fondoPortafolio.png?alt=media&token=ee308d5d-1fdb-4e1b-a42d-0dafeddc0af1');
@@ -7,4 +7,8 @@ html, body {
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: #ffffff;
+}

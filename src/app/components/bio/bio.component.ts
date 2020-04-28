@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as M from 'materialize-css'
 
 @Component({
@@ -7,6 +7,7 @@ import * as M from 'materialize-css'
   styleUrls: ['./bio.component.scss']
 })
 export class BioComponent implements OnInit {
+  @ViewChild('carousel', {static: false})carousel: ElementRef
   instances: M.Carousel;
 
   constructor() { }
@@ -16,6 +17,10 @@ export class BioComponent implements OnInit {
       var elems = document.querySelectorAll('.carousel');
       this.instances = M.Carousel.init(elems);
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.instances = M.Carousel.init(this.carousel.nativeElement);    
   }
 
 }

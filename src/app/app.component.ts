@@ -8,7 +8,7 @@ import * as M from 'materialize-css'
 })
 export class AppComponent implements OnInit {
   instances2: M.FloatingActionButton;
-
+  instances: M.Carousel
   title = 'portfolio-caro-dasilva';
 
   ngOnInit() {
@@ -20,5 +20,6 @@ export class AppComponent implements OnInit {
         direction: 'top'
       });
     });
+ 
   }
 }

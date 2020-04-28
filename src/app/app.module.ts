@@ -7,7 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
 import { BestWorksComponent } from './components/best-works/best-works.component';
 import { BioComponent } from './components/bio/bio.component';
-import { ContactMeComponent } from './component/contact-me/contact-me.component';
+import { ContactComponent } from './components/contact/contact.component';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,7 @@ import { ContactMeComponent } from './component/contact-me/contact-me.component'
     HomeComponent,
     BestWorksComponent,
     BioComponent,
-    ContactMeComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
