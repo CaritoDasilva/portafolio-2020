@@ -1,5 +1,13 @@
+.title-container{
+    h1{
+      font-family: 'Vidaloka', serif;
+      text-align: center;
+      font-size: 55px;
+      font-weight: bold;
+      margin: 4% 0;
+  }
+}
 .carousel{
-    margin-top: 5%;
     overflow: inherit;
     .carousel-item {
         width: 400px;
