@@ -2,30 +2,33 @@
     <div class="row">
         <div class="title-container">
             <h1>TRABAJEMOS JUNTOS</h1>
-            <div class="col m7 offset-m2">
-                <div class="row">
-                    <div class="col m6">
+            <div class="col m8 offset-m2">
+                <div class="row rrss-container">
+                    <div class="col m5 offset-m1">
                         <p>Puedes seguirme por mis redes:</p>
                     </div>
                     <div class="col m6 btn-container">
-                        <a class="btn-floating btn-large waves-effect z-depth-5 github-icon"><img src="../../../assets/images/github.svg" alt=""></a>
-                        <a class="btn-floating btn-large waves-effect z-depth-5 linkedin-icon"><img src="../../../assets/images/linkedin.svg" alt=""></a>
-                        <a class="btn-floating btn-large waves-effect z-depth-5 gmail-icon"><img src="../../../assets/images/gmail.svg" alt=""></a>
+                        <a href="https://github.com/CaritoDasilva" target="_blank" class="btn-floating btn-large waves-effect z-depth-5 github-icon"><img src="../../../assets/images/github.svg" alt=""></a>
+                        <a href="https://www.linkedin.com/in/carolina-da-silva-hernandez/" target="_blank" class="btn-floating btn-large waves-effect z-depth-5 linkedin-icon"><img src="../../../assets/images/linkedin.svg" alt=""></a>
+                        <a href="mailto:caritodasilva@gmail.com" class="btn-floating btn-large waves-effect z-depth-5 gmail-icon"><img src="../../../assets/images/gmail.svg" alt=""></a>
                     </div>
                     
                 </div>
                 <div class="divider"></div>
-                <div class="row">
-                    <p>También puedes descargar mi CV</p>
-                    <div class="col m6 offset-m3 btn-container">
-                        <a class="btn-floating btn-large waves-effect z-depth-5 pulse btn-cv"><img src="../../../assets/images/archive.svg" alt=""></a>
+                <div class="row rrss-container">
+                    <div class="col m5 offset-m1">
+                        <p>También puedes descargar mi CV:</p>
                     </div>
-                </div>    
+                    <div class="col m6 btn-container">
+                        <a href="https://firebasestorage.googleapis.com/v0/b/portafoliocaritodasilva.appspot.com/o/CarolinaDaSilva.pdf?alt=media&token=4ccbf4a0-0f7c-4d67-a2fe-d03f03018abf" target="_blank" class="btn-floating btn-large waves-effect z-depth-5 pulse btn-cv"><img src="../../../assets/images/archive.svg" alt=""></a>
+                    </div>
+                </div>   
+                <div class="divider"></div>
 
-                <p>
+                <p class="text-invitation-form">
                     Y si prefieres ser contactado a continuación te presento un breve formulario para que puedas
-                    dejar tus datos y ser contactado a la brevedad. Me encanta la idea de que trabajemos en conjunto,
-                    así que te estaré contactando a la brevedad.               
+                    dejar tus datos para hacerme llegar tus dudas y comentarios. Me encanta la idea de que trabajemos en conjunto,
+                    así que te invito a que conversemos.               
                 </p>   
             </div>
         </div>
@@ -34,28 +37,28 @@
         <div class="col m6 offset-m3 card purple darken-4 z-depth-5">
             <div class="card-content white-text">
                 <span class="card-title">¡Deja tus datos!</span>
-                <form action="">
+                <form (ngSubmit)="newClientContact(contactForm.value, $event)" [formGroup]="contactForm">
                     <div class="input-field col m8 offset-m2">
-                        <input id="last_name" type="text" class="">
+                        <input id="last_name" type="text" class="validate" formControlName="name" (keydown.enter)="$event.preventDefault()">
                         <label for="last_name">Nombre</label>
                     </div>                    
                     <div class="input-field col m8 offset-m2">
-                        <input id="organization" type="text" class="validate">
+                        <input id="organization" type="text" class="validate" formControlName="organization" (keydown.enter)="$event.preventDefault()">
                         <label for="organization">Organización</label>
                     </div>
                     <div class="input-field col m8 offset-m2">
-                        <input id="contact-info" type="text" class="validate">
+                        <input id="contact-info" type="text" class="validate" formControlName="phone" (keydown.enter)="$event.preventDefault()">
                         <label for="contact-info">Contacto</label>
                     </div>
                     <div class="input-field col m8 offset-m2">
-                        <input id="e-mail" type="text" class="validate">
+                        <input id="e-mail" type="text" class="validate" formControlName="mail" (keydown.enter)="$event.preventDefault()">
                         <label for="e-mail">E-mail</label>
                     </div>
                     <div class="input-field col m8 offset-m2">
-                        <textarea id="comments" class="materialize-textarea"></textarea>
+                        <textarea id="comments" class="materialize-textarea validate" formControlName="comments"></textarea>
                         <label for="comments">Comentarios</label>
                     </div>
-                    <button class="col m6 offset-m3 btn waves-effect waves-light" type="submit" name="action">¡Quiero entrevistarte!
+                    <button class="col m6 offset-m3 btn waves-effect waves-light" type="submit" [disabled]="!contactForm.valid">¡Quiero entrevistarte!
                     </button>
                 </form>
             </div>
