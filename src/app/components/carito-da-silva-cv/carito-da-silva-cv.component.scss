@@ -1,0 +1,207 @@
+.resume-container {
+    //Colors
+    $black: #34435E;
+    $white: #ffffff;
+    .caro-img-container {
+        display: flex;
+        justify-content: center;
+        .caro-img {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img {
+                width: 150px;
+            }
+        }
+    }
+    .row {
+        .card.info-container {
+            background-color: #FF9AA4;
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .card-content {
+                max-width: 100%;
+                .title-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    h1, h6 {
+                        font-family: 'Nunito', sans-serif;
+
+                    }
+                    h1 {
+                        font-size: 50px;
+                    }
+                    h6 {
+                        font-size: 16px;
+                    }
+
+                }
+                .section {
+                    margin-top: 2%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    .title-section {
+                        width: 200px;
+                        height: 40px;
+                        border-radius: 16px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'Nunito', sans-serif;
+                        font-size: 16px;
+                    }
+                    &.description {
+                        p, h5, h6 {
+                            font-family: 'Nunito', sans-serif;
+                            .year {
+                                font-weight: bold;
+                            }
+                        }
+                        h5 {
+                            font-weight: bold;
+                            font-size: 20px;
+                        }
+                        h6 {
+                            font-size: 16px;
+                            font-weight: bold
+                        }
+                        .trophy {
+                            width: 40px;
+                        }
+                        &.contact {
+                            width: 500px;
+                            .icon-container {
+                                width: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img.wsp-icon {
+                                    width: 24px;
+                                }
+                            }
+                            ul {
+                                width: 100%;
+                                &.contact {
+                                    margin-left: -5%;
+                                }
+                                li {
+                                    font-family: 'Nunito', sans-serif;
+                                    margin: 1%;
+                                    width: fit-content;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    a {
+                                        color: #ffffff;
+                                    }
+                                    img {
+                                        width: 35px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    main {
+                        min-width: 300px;
+                        max-width: 70%;
+                        margin: auto;
+                        div.experiences {
+                            font-family: 'Nunito', sans-serif;
+                            font-size: 1em;
+                            line-height: 1.75em;
+                            border-top: 3px solid;
+                            border-image: linear-gradient(to right, #EBFFCD 0%, #76FFF1 100%);
+                            border-image-slice: 1;
+                            border-width: 3px;
+                            margin: 0;
+                            padding: 40px;
+                            counter-increment: section;
+                            position: relative;
+                            color: $white;
+                            
+                            //numbers
+                            &:before {
+                              content: counter(section);
+                              position: absolute;
+                              border-radius: 4%;
+                              padding: 10px;
+                              height: 1.25em;
+                              width: 1.25em;
+                              background-color: $black;
+                              text-align: center;
+                              line-height: 1.25em;
+                              color: $white;
+                              font-size: 1em;
+                            }
+                          }
+                          //odd number borders
+                          div.experiences:nth-child(odd) {
+                            border-right: 3px solid;
+                            padding-left: 0;
+                            
+                            &:before {
+                              left: 100%; 
+                              margin-left: -9px;
+                              width: 60px;
+                              height: auto;
+                            }
+                          }
+                          //even number borders
+                          div.experiences:nth-child(even) {
+                            border-left: 3px solid;
+                            padding-right: 0;
+                            
+                            &:before {
+                              right: 100%; 
+                              margin-right: -9px;
+                              width: 60px;
+                              height: auto;
+                            }
+                          }
+                          //handle first and last
+                          div.experiences:first-child {
+                            border-top: 0;
+                            border-top-right-radius:0;
+                            border-top-left-radius:0;
+                            counter-set: section 2019;
+                          }
+                          div.experiences:last-child {
+                            border-bottom-right-radius:0;
+                            border-bottom-left-radius:0;
+                          }
+                    }
+
+                }
+
+            }
+    
+        }
+        
+    }
+    .btn-download-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2%;
+        .btn-download.btn-download {
+            background-color: #FF9AA4;
+            width: 200px;
+            height: 40px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

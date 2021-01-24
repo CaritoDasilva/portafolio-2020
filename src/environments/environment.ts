@@ -10,7 +10,7 @@ export const environment = {
     databaseURL: "https://portafoliocaritodasilva.firebaseio.com",
     projectId: "portafoliocaritodasilva",
     storageBucket: "portafoliocaritodasilva.appspot.com",
-    messagingSenderId: "564749230526",
+    messagingSenderId: "564749230526"
   }
 };
 

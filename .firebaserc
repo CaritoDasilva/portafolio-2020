@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portafoliocaritodasilva": {
+      "hosting": {
+        "portfolio-caro-dasilva": [
+          "portafoliocaritodasilva"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portafolio-test"
+  }
+}

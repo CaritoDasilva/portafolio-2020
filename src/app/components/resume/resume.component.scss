@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.resume-container {
+    font-family: 'Nunito', sans-serif!important;
+
+    .card  { 
+        .card-content .white-text.white-text {
+            &.white-text.white-text {
+
+                font-family: 'Nunito', sans-serif!important;
+            }
+
+        }
+    }
+    //Colors
+    $black: #34435E;
+    $white: #ffffff;
+
+    .caro-img-container {
+        // background-color: #8BDC03;
+        display: flex;
+        justify-content: center;
+    
+        .caro-img{
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                width: 150px;
+            }
+    
+        }
+        h1 {
+    
+        }
+    }
+    .info-container {
+        .mat-body, .mat-body-1, .mat-typography {
+            font-family: 'Nunito', sans-serif;
+    
+        }
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title-container {
+            
+            h6 {
+                text-align: center;
+            }
+        }
+        .section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            &.contact {
+                width: 500px;
+                .icon-container {
+                    width: 50px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    img.wsp-icon {
+                        width: 24px;
+                    }
+                }
+            }
+            h5, h6 {
+                font-weight: bold;
+            }
+            .year {
+                font-weight: bold;
+            }
+            ul {
+                width: 100%;
+            }
+            li {
+                margin: 1%;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    color: #ffffff;
+                }
+                img {
+                    width: 35px;
+                }
+            }
+            .title-section, .btn-download {
+                width: 200px;
+                height: 40px;
+                border-radius: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .trophy {
+                width: 40px;
+            }
+            main {
+                min-width: 300px;
+                max-width: 500px;
+                margin: auto;
+                div.experiences {
+                    font-size: 1em;
+                    line-height: 1.75em;
+                    border-top: 3px solid;
+                    border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+                    border-image-slice: 1;
+                    border-width: 3px;
+                    margin: 0;
+                    padding: 40px;
+                    counter-increment: section;
+                    position: relative;
+                    color: $white;
+                    
+                    //numbers
+                    &:before {
+                      content: counter(section);
+                      position: absolute;
+                      border-radius: 4%;
+                      padding: 10px;
+                      height: 1.25em;
+                      width: 1.25em;
+                      background-color: $black;
+                      text-align: center;
+                      line-height: 1.25em;
+                      color: $white;
+                      font-size: 1em;
+                    }
+                  }
+                  //odd number borders
+                  div.experiences:nth-child(odd) {
+                    border-right: 3px solid;
+                    padding-left: 0;
+                    
+                    &:before {
+                      left: 100%; 
+                      margin-left: -9px;
+                      width: 60px;
+                      height: auto;
+                    }
+                  }
+                  //even number borders
+                  div.experiences:nth-child(even) {
+                    border-left: 3px solid;
+                    padding-right: 0;
+                    
+                    &:before {
+                      right: 100%; 
+                      margin-right: -9px;
+                      width: 60px;
+                      height: auto;
+                    }
+                  }
+                  //handle first and last
+                  div.experiences:first-child {
+                    border-top: 0;
+                    border-top-right-radius:0;
+                    border-top-left-radius:0;
+                    counter-set: section 2019;
+                  }
+                  div.experiences:last-child {
+                    border-bottom-right-radius:0;
+                    border-bottom-left-radius:0;
+                  }
+              }
+        }
+    }
+    .btn-download-container {
+        display: flex;
+        justify-content: center;
+        .btn-download {
+            width: 200px;
+            height: 40px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

@@ -1,14 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Vidaloka&family=Nunito&display=swap');
+@import "../node_modules/materialize-css/dist/css/materialize.css";
+
+:root {
+	--background: #005;
+	--primary: #88D5BF;
+	--secondary: #5D6BF8;
+	--third: #e27fcb;
+}
+
 html, body { 
     height: 100%;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/portafoliocaritodasilva.appspot.com/o/fondoPortafolio.png?alt=media&token=ee308d5d-1fdb-4e1b-a42d-0dafeddc0af1');
+    background-color: #ffcdd2;
+    // background-image: url('https://firebasestorage.googleapis.com/v0/b/portafoliocaritodasilva.appspot.com/o/fondoPortafolio.png?alt=media&token=ee308d5d-1fdb-4e1b-a42d-0dafeddc0af1');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    
+}
+body  {
+  &.mat-typograpfy {
+    font-family: 'Nunito', sans-serif;
+
+  }
+
 }
 body { 
     margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif;
     color: #ffffff;
+}
+@media (max-width: 620px) {
+    body h1 {
+      margin-top: 2rem;
+    }
+  
+    body section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  
+    body section button {
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  //carrusel
+  
+#carousel {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 14%;
+}
+
+#carousel div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+
+#carousel div img {
+  width: 400px;
+  transition: width 1s;
+}
+
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.prev img {
+  width: 300px;
+}
+
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.next img {
+  width: 300px;
+}
+
+.buttonsProjects {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  justify-content: center;
+  margin-left: 106%;
 }

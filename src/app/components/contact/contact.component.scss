@@ -1,7 +1,9 @@
 .contact-container{
+    padding: 9px;
     .title-container{
         h1{
-            font-family: 'Vidaloka', serif;
+            font-family: 'Nunito', sans-serif;
+
             text-align: center;
             font-size: 35px;
             font-weight: bold;
@@ -10,7 +12,7 @@
         p{
             font-family: 'IBM Plex Mono', monospace;
             text-align: justify;
-            font-size: 16px;
+            font-size: 20px;
             margin-bottom: 0;
         }
         .rrss-container{
@@ -19,11 +21,23 @@
             .btn-container{
                 display: flex;
                 justify-content: space-around;
+                .btn-floating {
+                    background-color: #ffcdd2 ;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 56px;
+                    }
+                }
                 .btn-floating.linkedin-icon{
                     border-radius: 7px;
                 }
                 .btn-floating.gmail-icon{
-                    background-color: transparent;
+                    img {
+                        width: 75px;
+
+                    }
                 }
                 .btn-floating.btn-cv{
                     margin: 2%;
@@ -41,21 +55,59 @@
             margin: 5% 0;
         }
     }
+    .card.card {
+        background-color: #FF9AA4 ;
+    }
     .card-title{
         text-align: center;
     }
     form{
-        .input-field input[type=text], .input-field input[type=text]:focus, .input-field textarea, .input-field textarea:focus {
-            color: #ffffff;
+        width: 100%;
+        display: flex;
+        min-width: 100%;
+        flex-direction: column;
+
+        // .input-field input[type=text], .input-field input[type=text]:focus, .input-field textarea, .input-field textarea:focus {
+        //     color: #ffffff;
             
-        }
-        button{
-            margin-bottom: 7%;
-            margin-top: 5%;
-        }
-        .input-field input[type=text].invalid {
-            border-bottom: 1px solid #000;
-            box-shadow: 0 1px 0 0 #000;
-        }
+        // }
+        // button{
+        //     margin-bottom: 7%;
+        //     margin-top: 5%;
+        // }
+        // .input-field input[type=text].invalid {
+        //     border-bottom: 1px solid #000;
+        //     box-shadow: 0 1px 0 0 #000;
+        // }
+        .input-field label {
+            color: #ffffff;
+          }
+
+          .input-field input[type=text], .input-field textarea {
+            border-bottom: 1px solid #ffffff;
+          }
+          /* label focus color */
+          .input-field input[type=text]:focus + label {
+            color: #ffffff;
+          }
+          /* label underline focus color */
+          .input-field input[type=text]:focus {
+            border-bottom: 1px solid #ffffff;
+            box-shadow: 0 1px 0 0 #ffffff;
+          }
+          /* valid color */
+          .input-field input[type=text].valid {
+            border-bottom: 1px solid #ffffff;
+            box-shadow: 0 1px 0 0 #ffffff;
+          }
+          /* invalid color */
+          .input-field input[type=text].invalid {
+            border-bottom: 1px solid #ffffff;
+            box-shadow: 0 1px 0 0 #ffffff;
+          }
+          /* icon prefix focus color */
+          .input-field .prefix.active {
+            color: #ffffff;
+          }
     }
 }

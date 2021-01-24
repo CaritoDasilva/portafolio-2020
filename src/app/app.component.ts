@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as M from 'materialize-css'
 
 @Component({
@@ -8,7 +8,6 @@ import * as M from 'materialize-css'
 })
 export class AppComponent implements OnInit {
   instances2: M.FloatingActionButton;
-  instances: M.Carousel
   title = 'portfolio-caro-dasilva';
 
   ngOnInit() {
@@ -20,6 +19,11 @@ export class AppComponent implements OnInit {
         direction: 'top'
       });
     });
- 
+
+  }
+
+  ngAfterViewInit(): void {
+    const elems = document.querySelectorAll('.fixed-action-btn');
+    this.instances2 = M.FloatingActionButton.init(elems);
   }
 }

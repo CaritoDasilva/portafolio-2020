@@ -32,9 +32,12 @@
               "./node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/materialize-css/dist/js/materialize.js"
-            ]
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/materialize-css"
+              ]
+            },
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -129,6 +132,10 @@
               "devServerTarget": "portfolio-caro-dasilva:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
