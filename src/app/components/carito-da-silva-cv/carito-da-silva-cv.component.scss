@@ -40,6 +40,9 @@
                     }
                     h1 {
                         font-size: 50px;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            font-size: 35px;                        
+                        }
                     }
                     h6 {
                         font-size: 16px;
@@ -82,6 +85,7 @@
                         }
                         &.contact {
                             width: 500px;
+                            max-width: 100%;
                             .icon-container {
                                 width: 50px;
                                 display: flex;

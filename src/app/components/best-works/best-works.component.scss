@@ -14,8 +14,13 @@
   }
   img {
     border-radius: 16px;
+    max-width: 100%;
   }
   .tags-container {
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     .tag {
       background: #FF9AA4;
