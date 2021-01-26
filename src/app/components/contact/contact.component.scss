@@ -18,9 +18,17 @@
         .rrss-container{
             display: flex;
             align-items: center;
+            @media (min-width: 320px) and (max-width: 767px) {
+                display: inherit;                       
+            }
             .btn-container{
                 display: flex;
                 justify-content: space-around;
+                &.rrss {
+                    @media (min-width: 320px) and (max-width: 767px) {
+                        margin-top: 3%;                       
+                    }
+                }
                 .btn-floating {
                     background-color: #ffcdd2 ;
                     display: flex;
@@ -53,6 +61,7 @@
         }
         .text-invitation-form{
             margin: 5% 0;
+            line-height: 30px; 
         }
     }
     .card.card {

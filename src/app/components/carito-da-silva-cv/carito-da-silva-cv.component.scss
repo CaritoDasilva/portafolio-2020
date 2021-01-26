@@ -41,7 +41,7 @@
                     h1 {
                         font-size: 50px;
                         @media (min-width: 320px) and (max-width: 767px) {
-                            font-size: 35px;                        
+                            font-size: 30px;                        
                         }
                     }
                     h6 {
@@ -118,28 +118,29 @@
                         }
                     }
                     main {
-                        min-width: 300px;
+                        // min-width: 300px;
                         max-width: 70%;
                         margin: auto;
                         div.experiences {
                             font-family: 'Nunito', sans-serif;
                             font-size: 1em;
                             line-height: 1.75em;
-                            border-top: 3px solid;
+                            // border-top: 3px solid;
                             border-image: linear-gradient(to right, #EBFFCD 0%, #76FFF1 100%);
                             border-image-slice: 1;
                             border-width: 3px;
                             margin: 0;
                             padding: 40px;
-                            counter-increment: section;
+                            // counter-increment: section;
                             position: relative;
                             color: $white;
                             
                             //numbers
                             &:before {
-                              content: counter(section);
+                            //   content: counter(section);
+                            //   content: 2019;
                               position: absolute;
-                              border-radius: 4%;
+                            //   border-radius: 4%;
                               padding: 10px;
                               height: 1.25em;
                               width: 1.25em;
@@ -149,9 +150,16 @@
                               color: $white;
                               font-size: 1em;
                             }
+                            &.y2019:before {
+                                content: '2019';
+                            }
+                            &.y2020::after {
+                                content: '2020';
+                            }
+
                           }
                           //odd number borders
-                          div.experiences:nth-child(odd) {
+                          div.experiences.y2019, div.experiences.y2021 {
                             border-right: 3px solid;
                             padding-left: 0;
                             
@@ -162,9 +170,17 @@
                               height: auto;
                             }
                           }
+                          div.experiences.y2021 {
+                            border-top: 3px solid;
+                            border-bottom: 0;
+                            border-left: 0;
+                          }
                           //even number borders
-                          div.experiences:nth-child(even) {
-                            border-left: 3px solid;
+                          div.experiences.y2020 {
+                            border-top: 3px solid;
+                            border-left: 3px solid;                            
+                            border-right: 0;
+                            border-bottom: 0;
                             padding-right: 0;
                             
                             &:before {
@@ -172,18 +188,27 @@
                               margin-right: -9px;
                               width: 60px;
                               height: auto;
+                              content: '2020';
                             }
                           }
                           //handle first and last
-                          div.experiences:first-child {
+                          div.experiences.y2019 {
+                            border-bottom: 0;
                             border-top: 0;
-                            border-top-right-radius:0;
-                            border-top-left-radius:0;
-                            counter-set: section 2019;
+                            border-left: 0;
+                            // border-top-right-radius:0;
+                            // border-top-left-radius:0;
+                            // counter-set: section 2019;
                           }
-                          div.experiences:last-child {
-                            border-bottom-right-radius:0;
-                            border-bottom-left-radius:0;
+                          div.experiences.y2021 {
+                            border-bottom: 0;
+                            border-left: 0;
+                            // border-bottom-right-radius:0;
+                            // border-bottom-left-radius:0;
+                            &:before {                               
+                                content: '2021';
+                              }
+
                           }
                     }
 
