@@ -63,7 +63,53 @@
                         justify-content: center;
                         align-items: center;
                         font-family: 'Nunito', sans-serif;
-                        font-size: 16px;
+                        font-size: 18px;
+                    }
+                    &.header {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        ul {
+                            margin-left: 7%;
+                            li {
+
+                                .icon-container {
+                                    width: 50px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    img.wsp-icon {
+                                        width: 24px;
+                                    }
+                                }
+                                font-family: 'Nunito', sans-serif;
+                                margin: 1%;
+                                width: fit-content;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                a {
+                                    color: #ffffff;
+                                }
+                                img {
+                                    width: 35px;
+                                }
+                            }
+                        }
+                        @media (min-width: 320px) and (max-width: 1080px) {      
+                            flex-wrap: wrap;
+                            ul {
+                                margin-left: 0;
+                                margin-bottom: 0;
+                                width: 100%;
+
+                            }
+                        }
+                        img {
+                            width: 35px;
+                        }
+
                     }
                     &.description {
                         p, h5, h6 {
@@ -85,18 +131,16 @@
                         }
                         &.contact {
                             width: 500px;
-                            max-width: 100%;
-                            .icon-container {
-                                width: 50px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                img.wsp-icon {
-                                    width: 24px;
-                                }
-                            }
+                            max-width: 100%;                            
                             ul {
                                 width: 100%;
+                                &.skills {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+
+                                }
                                 &.contact {
                                     margin-left: -5%;
                                 }
@@ -118,29 +162,23 @@
                         }
                     }
                     main {
-                        // min-width: 300px;
                         max-width: 70%;
                         margin: auto;
                         div.experiences {
                             font-family: 'Nunito', sans-serif;
                             font-size: 1em;
                             line-height: 1.75em;
-                            // border-top: 3px solid;
                             border-image: linear-gradient(to right, #EBFFCD 0%, #76FFF1 100%);
                             border-image-slice: 1;
                             border-width: 3px;
                             margin: 0;
                             padding: 40px;
-                            // counter-increment: section;
                             position: relative;
                             color: $white;
                             
                             //numbers
                             &:before {
-                            //   content: counter(section);
-                            //   content: 2019;
                               position: absolute;
-                            //   border-radius: 4%;
                               padding: 10px;
                               height: 1.25em;
                               width: 1.25em;
@@ -150,8 +188,8 @@
                               color: $white;
                               font-size: 1em;
                             }
-                            &.y2019:before {
-                                content: '2019';
+                            &.y2021:before {
+                                content: '2021';
                             }
                             &.y2020::after {
                                 content: '2020';
@@ -170,7 +208,7 @@
                               height: auto;
                             }
                           }
-                          div.experiences.y2021 {
+                          div.experiences.y2019 {
                             border-top: 3px solid;
                             border-bottom: 0;
                             border-left: 0;
@@ -192,21 +230,16 @@
                             }
                           }
                           //handle first and last
-                          div.experiences.y2019 {
+                          div.experiences.y2021 {
                             border-bottom: 0;
                             border-top: 0;
                             border-left: 0;
-                            // border-top-right-radius:0;
-                            // border-top-left-radius:0;
-                            // counter-set: section 2019;
                           }
-                          div.experiences.y2021 {
+                          div.experiences.y2019 {
                             border-bottom: 0;
                             border-left: 0;
-                            // border-bottom-right-radius:0;
-                            // border-bottom-left-radius:0;
                             &:before {                               
-                                content: '2021';
+                                content: '2019';
                               }
 
                           }
