@@ -1,0 +1,198 @@
+.contactContainer {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.titleContainer {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+
+  h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+}
+
+.rrssSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rrssRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+    flex: 1;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.socialBtn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #ffcdd2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.linkedin {
+    border-radius: 7px;
+  }
+
+  &.gmail {
+    width: 70px;
+  }
+
+  &.cvBtn {
+    img {
+      width: 24px;
+      height: auto;
+    }
+  }
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+
+.invitationText {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.formCard {
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: #FF9AA4;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardTitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.successMsg {
+  text-align: center;
+  color: #2d6a4f;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.errorMsg {
+  text-align: center;
+  color: #d62828;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputField {
+  position: relative;
+
+  input,
+  textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 1.2rem 0 0.3rem;
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-bottom-color: #ffffff;
+      box-shadow: 0 1px 0 0 #ffffff;
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      top: 0;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 1.1rem;
+    left: 0;
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+}
+
+.submitBtn {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #5D6BF8;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: #4a58e6;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

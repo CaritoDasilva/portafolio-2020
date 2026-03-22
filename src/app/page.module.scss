@@ -1,0 +1,98 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.titleContainer {
+  color: #ffffff;
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  h5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 35px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+  }
+}
+
+.fotoContent {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.profileImg {
+  animation: shake 4s ease-in-out infinite;
+  height: 45vh !important;
+  width: auto !important;
+
+  @media (max-width: 767px) {
+    height: 35vh !important;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-1.5deg); }
+  75% { transform: rotate(1.5deg); }
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0 5%;
+}
+
+.linedThin {
+  background: transparent;
+  border: solid 2px white;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  font-family: 'Nunito', sans-serif;
+
+  &:hover {
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 620px) {
+  .buttonsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
